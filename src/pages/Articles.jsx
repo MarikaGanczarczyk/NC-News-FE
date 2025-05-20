@@ -1,11 +1,14 @@
 import React from 'react'
+import ArticleList from '../Components/ArticleList'
 
 export default function Articles() {
   return (
-    <div>
-         
-      <h1>Articles</h1>
-     
-    </div>
+    <>
+    <main className='articles-page'>
+      <h1 className='articles-title'>All Articles</h1>
+      <ArticleList/>
+    </main>
+    
+    </>
   )
 }

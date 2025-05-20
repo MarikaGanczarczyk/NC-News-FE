@@ -21,12 +21,42 @@
   color: #1a1a1a;
   margin-top: 2rem;
 }
-body {
-  background-image: url('https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh; 
- 
 
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style:  none;
+  padding: 0;
+  margin: 0;
+  
+  justify-content: center;
+  margin-top: 200px;
+ align-items: stretch;
 }
+ .article-list li{
+  display: grid;
+  flex: 0 1 300px;
+  list-style: none;
+ }
+ .article-card {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #c22b2b;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.article-card-img {
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s easy;
+}
+.article-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #aaa;
+  transform: scale(1.05);
+}
+
