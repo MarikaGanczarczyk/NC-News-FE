@@ -9,24 +9,23 @@ import Topics from "./pages/Topics";
 import LogIn from "./pages/LogIn";
 import ArticleCard from "./Components/ArticleCard";
 import ArticleList from "./Components/ArticleList";
+import SingleArticle from "./pages/SingleArticle";
 
 function App() {
   return (
     <>
-        <NavBar />
+      <NavBar />
       <Routes>
-    
-   
         <Route path="/home" element={<Home />} />
         <Route path="/articles" element={<ArticleList />} />
-        {/* <Route path="/articles/:article_id" element={<ArticleCard/>}></Route> */}
+        <Route path="/articles/:article_id" element={<SingleArticle />} />
+
         <Route path="/topics" element={<Topics />} />
         <Route path="/logIn" element={<LogIn />} />
       </Routes>
-      
-
     </>
   );
 }
 
 export default App;
+<Route path="/articles/:article_id" element={<SingleArticle />} />;
