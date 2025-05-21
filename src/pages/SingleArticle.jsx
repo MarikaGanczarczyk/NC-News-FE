@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticlesID } from "../../api";
+import CommentCard from "../Components/CommentCard";
+import CommentsList from "../Components/CommentsList";
 
 function SingleArticle() {
   const [isLoading, setIsLoading] = useState(false);
@@ -55,8 +57,12 @@ function SingleArticle() {
              onClick={()=> setVoteButton(!voteButton)} ><div className="thumb"></div> </button>
              
             </div>
+            <CommentsList article-id={article_id}/>
+              
           </section>
+          
         )}
+     
       </React.Fragment>
     </>
   );
