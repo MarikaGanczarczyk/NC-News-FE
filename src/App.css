@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
-
-* {
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap") * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
-.home, .reports, .products {
+.home,
+.reports,
+.products {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -16,31 +16,30 @@
 
 .title {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 3rem;
   color: #1a1a1a;
   margin-top: 2rem;
 }
 
-
 .article-list {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  list-style:  none;
+  list-style: none;
   padding: 0;
   margin: 0;
-  
+
   justify-content: center;
   margin-top: 200px;
- align-items: stretch;
+  align-items: stretch;
 }
- .article-list li{
+.article-list li {
   display: grid;
   flex: 0 1 300px;
   list-style: none;
- }
- .article-card {
+}
+.article-card {
   width: 100%;
   min-height: 300px;
   border: 1px solid #c22b2b;
@@ -60,3 +59,36 @@
   transform: scale(1.05);
 }
 
+.vote-button {
+  background-color: #b7b9ba;
+  border: 1px solid #aaa;
+  border-radius: 99px;
+  width: 50px;
+  height: 28px;
+  transition: background-color 0.1s ease, border-color 0.2s ease;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.748);
+  position: relative;
+}
+.vote-button .thumb{
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 99px;
+  transition: translateX(0);
+  transition: left 0.15s ease;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%); 
+}
+
+.vote-button.voteButton{
+  background-color: rgb(58, 59, 59);
+}
+.vote-button:hover{
+  border-color: #6f6f6f;
+}
+.vote-button.voteButton .thumb{
+left: calc(50px - 25px)
+}
