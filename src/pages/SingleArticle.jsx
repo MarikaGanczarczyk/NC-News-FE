@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArticlesID } from "../../api";
 import CommentCard from "../Components/CommentCard";
 import CommentsList from "../Components/CommentsList";
+import Votes from "../Components/Votes";
 
 function SingleArticle() {
   const [isLoading, setIsLoading] = useState(false);
@@ -53,9 +54,8 @@ function SingleArticle() {
               <p className="text-body">{articleById.body}</p>
             </div>
             <div>
-             <button className={`vote-button ${voteButton ? "voteButton" : ""}`}
-             onClick={()=> setVoteButton(!voteButton)} ><div className="thumb"></div> </button>
-             
+              <Votes />
+            
             </div>
             <CommentsList article-id={article_id}/>
               
