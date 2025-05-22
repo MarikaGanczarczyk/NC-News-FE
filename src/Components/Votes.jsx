@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
 
-const Votes = () => {
-  const [likesCount, setLikesCount] = useState(0);
 
 
 
-//   useEffect(()=>{
-//     getLikesCount(article_id)
-//     .then
-//   })
+const Votes = ({votes}) => {
+  const [likesCount, setLikesCount] = useState(votes ?? 0);
+  
+
+
+
   return (
     <>
       <div>
@@ -20,6 +20,7 @@ const Votes = () => {
           Dislike <AiFillDislike />
         </button>
         <p>Total likes: {likesCount} </p>
+       
       </div>
     </>
   );
