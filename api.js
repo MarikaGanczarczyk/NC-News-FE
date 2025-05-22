@@ -18,7 +18,7 @@ export const getArticles = ()=>{
     })
 }
 
-export const getArticlesID = (article_id)=>{
+export const getArticlesByID = (article_id)=>{
     return apiClient
     .get(`/articles/${article_id}`)
     .then((response)=>{

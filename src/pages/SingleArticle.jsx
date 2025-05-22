@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticlesID } from "../../api";
+import { getArticlesByID } from "../../api";
 import CommentCard from "../Components/CommentCard";
 import CommentsList from "../Components/CommentsList";
 import Votes from "../Components/Votes";
@@ -10,12 +10,12 @@ function SingleArticle() {
   const [hasError, setHaserror] = useState(false);
   const { article_id } = useParams();
   const [articleById, setArticleById] = useState({});
-  const [voteButton, setVoteButton] = useState(false)
+ 
 
   useEffect(() => {
     setIsLoading(true);
     setHaserror(false);
-    getArticlesID(article_id)
+    getArticlesByID(article_id)
       .then((article) => {
         setArticleById(article);
         setIsLoading(false);

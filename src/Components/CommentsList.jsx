@@ -4,8 +4,10 @@ import { useParams } from "react-router-dom";
 
 import { getCommentsByArticleId } from "../../api";
 import CommentCard from "./CommentCard";
+import CommentsForm from "./CommentsForm"
 
-const CommentsList = () => {
+
+const CommentsList = ({newComment, setNewComment}) => {
     const { article_id } = useParams();
 
   const [comments, setComments] = useState([]);
@@ -32,9 +34,13 @@ const CommentsList = () => {
 
   return (
     <>
+   
       <h1 className="comment-header-title">Comments</h1>
+      
       <ul className="comment-list">
+         <CommentsForm newComment={newComment} setNewComment={setNewComment} />
         {comments.map((comment, index) => (
+          
           
             <CommentCard key={index} comment={comment} />
           
