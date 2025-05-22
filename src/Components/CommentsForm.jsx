@@ -10,7 +10,9 @@ const [comments, setComments] = useState([])
    setComments((prevComments)=>[...prevComments, {name, comment: newComment}])
    setNewComment("")
    setName("")
+   
   };
+
 
 //   const onClickHandler = ()=>{
 //     setComments((newComment) => [...comments, newComment] )

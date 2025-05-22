@@ -41,3 +41,9 @@ export const getCommentsByArticleId=(article_id) =>{
         throw err 
     })
 }
+
+export const postComment=(article_id)=>{
+    return apiClient
+    .post(`/api/articles/${article_id}/comments`)
+    .then()
+}
