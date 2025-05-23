@@ -55,3 +55,16 @@ export const deleteComment = (commentId) => {
     return response;
   });
 };
+
+
+export const getTopics = () => {
+  return apiClient
+    .get(`/topics`)
+    .then((response) => {
+      return response.data.topics;
+    })
+    .catch((err) => {
+      console.log(err);
+      throw err;
+    });
+};

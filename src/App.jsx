@@ -12,6 +12,7 @@ import ArticleList from "./Components/ArticleList";
 import SingleArticle from "./pages/SingleArticle";
 import CommentCard from "./Components/CommentCard";
 import CommentsList from "./Components/CommentsList";
+import TopicList from "./Components/TopicList";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/articles" element={<ArticleList />} />
         <Route path="/articles/:article_id" element={<SingleArticle/>} />
 
-        <Route path="/topics" element={<Topics />} />
+        <Route path="/topics" element={<TopicList />} />
         <Route path="/logIn" element={<LogIn />} />
       
         
