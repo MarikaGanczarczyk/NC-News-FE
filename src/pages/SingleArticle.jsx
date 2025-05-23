@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticlesByID } from "../../api";
-import CommentCard from "../Components/CommentCard";
+
 import CommentsList from "../Components/CommentsList";
 import Votes from "../Components/Votes";
 
@@ -59,7 +59,7 @@ function SingleArticle(newComment, setNewComment) {
               <Votes />
             
             </div>
-            <CommentsList article-id={article_id} newComment={newComment} setNewComment={setNewComment}/>
+            <CommentsList article-id={article_id} newComment={newComment} setNewComment={setNewComment} articleById={articleById.author}/>
               
           </section>
           
