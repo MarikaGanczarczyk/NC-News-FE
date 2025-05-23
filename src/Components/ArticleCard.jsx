@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function ArticleCard({ article }) {
   const navigate = useNavigate();
 
+
   return (
     <>
       <section
