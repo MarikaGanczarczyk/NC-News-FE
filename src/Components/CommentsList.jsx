@@ -7,7 +7,7 @@ import CommentCard from "./CommentCard";
 import CommentsForm from "./CommentsForm"
 
 
-const CommentsList = ({newComment, setNewComment}) => {
+const CommentsList = () => {
     const { article_id } = useParams();
 
   const [comments, setComments] = useState([]);
@@ -23,11 +23,14 @@ const CommentsList = ({newComment, setNewComment}) => {
         console.log(err);
         setIsLoading(false);
       });
+      
   }, [article_id]);
 
 
 
-
+const handleAddComments = (newComment) =>{
+  setComments((prevComments)=>[newComment, ...prevComments])
+}
   if (isLoading) {
     return <p>Loading...</p>;
   }
@@ -38,7 +41,7 @@ const CommentsList = ({newComment, setNewComment}) => {
       <h1 className="comment-header-title">Comments</h1>
       
       <ul className="comment-list">
-         <CommentsForm newComment={newComment} setNewComment={setNewComment} />
+         <CommentsForm  articleId={article_id} onCommentAdded= {handleAddComments}/>
         {comments.map((comment, index) => (
           
           

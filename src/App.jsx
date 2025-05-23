@@ -2,7 +2,7 @@ import React from "react";
 
 import "./App.css";
 import NavBar from "./Components/NavBar";
-import { Route, Routes } from "react-router";
+import { Route, Routes, Navigate } from "react-router";
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
 import Topics from "./pages/Topics";
@@ -18,6 +18,8 @@ function App() {
     <>
       <NavBar />
       <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+
         <Route path="/home" element={<Home />} />
         <Route path="/articles" element={<ArticleList />} />
         <Route path="/articles/:article_id" element={<SingleArticle/>} />

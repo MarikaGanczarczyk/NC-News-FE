@@ -2,6 +2,7 @@ import axios from "axios";
 
 
 
+
 const apiClient = axios.create({
     baseURL: "https://seeding-nc-news-5ee3.onrender.com/api"
 })
@@ -39,5 +40,17 @@ export const getCommentsByArticleId=(article_id) =>{
     .catch((err)=>{
         console.log(err);
         throw err 
+    })
+}
+
+export const postComment=(article_id, username, body)=>{
+    console.log(article_id);
+    
+    return apiClient
+
+    .post(`/articles/${article_id}/comments`, {username, body})
+    .then((response) =>{
+        console.log(response);
+        return response 
     })
 }
