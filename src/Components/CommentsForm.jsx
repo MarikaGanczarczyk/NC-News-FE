@@ -1,22 +1,29 @@
 import React, { useState } from "react";
+import { postComment } from "../../api";
 
-function CommentsForm() {
+
+function CommentsForm({ articleId, onCommentAdded }) {
   const [newComment, setNewComment] = useState("");
   const [name, setName] = useState("");
-const [comments, setComments] = useState([])
+  const [comments, setComments] = useState([]);
 
   const handleSubmit = (event) => {
-   event.preventDefault()
-   setComments((prevComments)=>[...prevComments, {name, comment: newComment}])
-   setNewComment("")
-   setName("")
-   
+    event.preventDefault();
+    postComment(articleId, name, newComment).then((response) => {
+      alert("Thanks! Your comment has been posted");
+      if (onCommentAdded) {
+        onCommentAdded(response.data.comment);
+      }
+
+      setNewComment("");
+      setName("");
+    })
+    .catch((err)=>{
+      alert("Something went wrong while posting your comment.")
+      console.log(err);
+      
+    })
   };
-
-
-//   const onClickHandler = ()=>{
-//     setComments((newComment) => [...comments, newComment] )
-//   }
 
   return (
     <>

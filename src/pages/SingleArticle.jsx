@@ -5,7 +5,7 @@ import CommentCard from "../Components/CommentCard";
 import CommentsList from "../Components/CommentsList";
 import Votes from "../Components/Votes";
 
-function SingleArticle() {
+function SingleArticle(newComment, setNewComment) {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHaserror] = useState(false);
   const { article_id } = useParams();
@@ -40,7 +40,8 @@ function SingleArticle() {
           <p>Loading...</p>
         ) : (
           <section className="single-article">
-            <h1 className="single-article-card-title">{articleById.title}</h1>
+            <div className="article-header">
+            <h1 className="single-article-title">{articleById.title}</h1>
 
             <p className="article-card-author">Author: {articleById.author}</p>
             <p className="article-card-topic">Topic: {articleById.topic}</p>
@@ -53,11 +54,12 @@ function SingleArticle() {
             <div className="text-box">
               <p className="text-body">{articleById.body}</p>
             </div>
+          </div>
             <div>
               <Votes />
             
             </div>
-            <CommentsList article-id={article_id}/>
+            <CommentsList article-id={article_id} newComment={newComment} setNewComment={setNewComment}/>
               
           </section>
           

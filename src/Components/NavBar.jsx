@@ -6,6 +6,8 @@ import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import "./NavBar.css";
 import { IconContext } from "react-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 function NavBar() {
   const [sidebar, setSidebar] = useState(false);
@@ -14,10 +16,8 @@ function NavBar() {
 
   return (
     <>
-   
-      <IconContext.Provider value={{ color: "#fff" }}>
+      <IconContext.Provider value={{ color: "#cc6699" }}>
         <div className="navbar">
-        
           <div className="menu-bars" onClick={showSidebar}>
             <FaIcons.FaBars />
           </div>
@@ -42,6 +42,14 @@ function NavBar() {
             })}
           </ul>
         </nav>
+        <div className="social-icons">
+      <a href="https://instagram.com" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faInstagram} className="icon" />
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faFacebookF} className="icon" />
+      </a>
+    </div>
       </IconContext.Provider>
     </>
   );
