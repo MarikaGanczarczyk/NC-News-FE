@@ -13,6 +13,7 @@ import SingleArticle from "./pages/SingleArticle";
 import CommentCard from "./Components/CommentCard";
 import CommentsList from "./Components/CommentsList";
 import TopicList from "./Components/TopicList";
+import TopicPage from "./pages/TopicPage";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
 
         <Route path="/topics" element={<TopicList />} />
         <Route path="/logIn" element={<LogIn />} />
-      
+      <Route path="topics/:slug" element={<TopicPage/>}/>
         
       </Routes>
       
