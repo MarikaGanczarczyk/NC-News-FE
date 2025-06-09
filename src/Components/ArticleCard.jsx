@@ -19,7 +19,9 @@ function ArticleCard({ article }) {
         <h1 className="article-card-title">{article.title}</h1>
         <p className="article-card-author">{article.author}</p>
         <p className="article-card-topic">{article.topic}</p>
+        <div className="read-button-container">
         <button className="read-button"  onClick={() => navigate(`/articles/${article.article_id}`)}>Read</button>
+        </div>
       </section>
     </>
   );

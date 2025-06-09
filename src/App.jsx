@@ -14,6 +14,7 @@ import CommentCard from "./Components/CommentCard";
 import CommentsList from "./Components/CommentsList";
 import TopicList from "./Components/TopicList";
 import TopicPage from "./pages/TopicPage";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
       <Route path="topics/:slug" element={<TopicPage/>}/>
         
       </Routes>
-      
+      <Footer/>
     </>
   );
 }

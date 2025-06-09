@@ -43,10 +43,11 @@ function NavBar() {
           </ul>
         </nav>
         <div className="social-icons">
-      <a href="https://instagram.com" target="_blank" rel="noreferrer">
+      <a className="icon-ins" href="https://instagram.com" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faInstagram} className="icon" />
       </a>
-      <a href="https://facebook.com" target="_blank" rel="noreferrer">
+      <a 
+     className="icon-fb" href="https://facebook.com" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faFacebookF} className="icon" />
       </a>
     </div>

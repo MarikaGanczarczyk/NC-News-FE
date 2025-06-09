@@ -1,4 +1,5 @@
 import React from 'react'
+import ArticleList from '../Components/ArticleList'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
     Built by developers, made for curious minds.
   </p>
 </section>
+
     </div>
   )
 }

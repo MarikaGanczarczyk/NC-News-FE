@@ -5,9 +5,12 @@ const apiClient = axios.create({
   baseURL: "https://seeding-nc-news-5ee3.onrender.com/api",
 });
 
-export const getArticles = () => {
+export const getArticles = ({ sortBy , order  } = {}) => {
+  const params = {}
+  if (sortBy) params.sort_by= sortBy
+  if(order) params.order =order
   return apiClient
-    .get(`/articles`)
+    .get(`/articles`,  { params  })
     .then((response) => {
       return response.data.articles;
     })
