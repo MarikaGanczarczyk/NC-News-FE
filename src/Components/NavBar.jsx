@@ -20,8 +20,18 @@ function NavBar() {
         <div className="navbar">
           <div className="menu-bars" onClick={showSidebar}>
             <FaIcons.FaBars />
+             
           </div>
-        </div>
+          <div className="social-icons">
+      <a className="icon-ins" href="https://instagram.com" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faInstagram} className="icon" />
+      </a>
+      <a 
+     className="icon-fb" href="https://facebook.com" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={faFacebookF} className="icon" />
+      </a>
+    </div>
+        
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
@@ -41,16 +51,10 @@ function NavBar() {
               );
             })}
           </ul>
+             
         </nav>
-        <div className="social-icons">
-      <a className="icon-ins" href="https://instagram.com" target="_blank" rel="noreferrer">
-        <FontAwesomeIcon icon={faInstagram} className="icon" />
-      </a>
-      <a 
-     className="icon-fb" href="https://facebook.com" target="_blank" rel="noreferrer">
-        <FontAwesomeIcon icon={faFacebookF} className="icon" />
-      </a>
-    </div>
+        </div>
+    
       </IconContext.Provider>
     </>
   );

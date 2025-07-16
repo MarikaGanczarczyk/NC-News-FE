@@ -37,29 +37,33 @@ function SingleArticle(newComment, setNewComment) {
     <>
       <React.Fragment>
         {isLoading ? (
-          <p>Loading...</p>
+          <p className="loading ">Loading...</p>
         ) : (
-          <section className="single-article">
+          <section >
+            <div className="single-article">
             <div className="article-header">
             <h1 className="single-article-title">{articleById.title}</h1>
-
-            <p className="article-card-author">Author: {articleById.author}</p>
-            <p className="article-card-topic">Topic: {articleById.topic}</p>
-            <p>Date: {formatedDate}</p>
-            <img
+             <img
               className="article-card-img"
               src={articleById.article_img_url}
               alt={articleById.title}
             />
+
+            <p className="article-card-author">Author: {articleById.author}</p>
+            <p className="article-card-topic">Topic: {articleById.topic}</p>
+            <p>Date: {formatedDate}</p>
+           
             <div className="text-box">
               <p className="text-body">{articleById.body}</p>
             </div>
+            <Votes />
           </div>
-            <div>
-              <Votes />
-            
+          </div>
+            <div className="single-article">
+              
+             <CommentsList article-id={article_id} newComment={newComment} setNewComment={setNewComment} articleById={articleById.author}/>
             </div>
-            <CommentsList article-id={article_id} newComment={newComment} setNewComment={setNewComment} articleById={articleById.author}/>
+           
               
           </section>
           

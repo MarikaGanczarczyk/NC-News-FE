@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 function ArticleCard({ article }) {
   const navigate = useNavigate();
 
-
   return (
     <>
       <section
@@ -16,11 +15,19 @@ function ArticleCard({ article }) {
           src={article.article_img_url}
           alt={article.title}
         />
+    
         <h1 className="article-card-title">{article.title}</h1>
-        <p className="article-card-author">{article.author}</p>
+     <div className="read-button-container">
+    <div>
         <p className="article-card-topic">{article.topic}</p>
-        <div className="read-button-container">
-        <button className="read-button"  onClick={() => navigate(`/articles/${article.article_id}`)}>Read</button>
+        <p className="article-card-author">{article.author}</p>
+        </div>
+          <button
+            className="read-button"
+            onClick={() => navigate(`/articles/${article.article_id}`)}
+          >
+            Read
+          </button>
         </div>
       </section>
     </>

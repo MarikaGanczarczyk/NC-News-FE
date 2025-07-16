@@ -1,15 +1,4 @@
 
-/* @keyframes colorShift {
-   0% {
-     background-color: black;
-   }
-   50% {
-     background-color: #b10e08;
-   }
-   100% {
-     background-color: black;
-   }
- } */
 
 
 
@@ -91,7 +80,11 @@ align-items: center;
  span {
     margin-left: 16px;
  }
- .icon {
+ .icon{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 2rem;
   color: #cc6699;
   font-size: 36px;
   margin: 0 10px;
@@ -109,6 +102,7 @@ align-items: center;
   right: 10px;   
   display: flex;   
   gap: 15px; 
+  z-index: 1000;
 
    
 }
