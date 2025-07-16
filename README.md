@@ -1,4 +1,4 @@
-Live site : 
+Live site : marika-ganczarczyk-nc-news.netlify.app
 
 Overview:
 
