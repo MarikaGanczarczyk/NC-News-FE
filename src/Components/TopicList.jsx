@@ -10,8 +10,6 @@ function TopicList() {
   useEffect(() => {
     getTopics()
       .then((response) => {
-       
-        
         setTopics(response);
         setIsLoading(false);
       })
@@ -27,14 +25,20 @@ function TopicList() {
 
   return (
     <>
-      <h1 className="topics-header-title">Topics</h1>
-      <ul className="topics-list">
-        {topics.map((topic) => (
-          <li key={topic.slug}>
-            <TopicCard topic={topic} />
-          </li>
-        ))}
-      </ul>
+      <div className="topic-container">
+        <div className="topic-title">
+          <h1>Topics</h1>
+          <h2>Pick a topic that interests you the most!</h2>
+        </div>
+
+        <ul className="topics-list">
+          {topics.map((topic) => (
+            <li key={topic.slug}>
+              <TopicCard topic={topic} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
