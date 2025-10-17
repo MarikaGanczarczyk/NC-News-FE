@@ -1,0 +1,83 @@
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+}
+.topic-list li {
+  flex-direction: 1 1 200px;
+}
+.topics-card {
+      display: flex
+;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid #c22b2b;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px 10px 0 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.topics-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #aaa;
+  transform: scale(1.05);
+}
+.topic-card-img {
+     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 16px 0;
+    display: block;
+}
+.topic-card-title{
+  font-size: 2.2rem;
+    font-weight: bold;
+   
+}
+.read-button-topic{
+  padding: 6px 12px;
+    background-color: #cc6699;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 160px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s 
+ease;
+
+}
+.topic-container{
+  display: grid;
+  
+  gap: 20px;
+  max-width: 1400px;
+   margin: 30px auto;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #fff1f7;
+  min-height: 900px;
+}
+.topic-title{
+  font-size: 40px;
+  text-align: center;
+  color: #cc6699;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.topic-title h2{
+  font-family: "Playfair Display", serif;
+    font-size: 25px;
+    color: #cc6699;
+    font-style: italic;
+    margin-bottom: 20px;
+}

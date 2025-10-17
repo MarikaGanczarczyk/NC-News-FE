@@ -1,0 +1,38 @@
+.comment-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.comment-card:hover {
+  transform: scale(1.01);
+}
+.comment-card-author {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+.comment-card-topic {
+  font-style: italic;
+  color: #555;
+}
+.comment-card-date {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+.comment-button {
+  height: 30px;
+  width: 80px;
+  background-color: #b4afaf;
+  font-size: 1.05rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}

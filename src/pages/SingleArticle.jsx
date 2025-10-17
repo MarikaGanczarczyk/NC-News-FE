@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticlesByID } from "../../api";
 
-import CommentsList from "../Components/CommentsList";
-import Votes from "../Components/Votes";
+import CommentsList from "../Components/comments/CommentsList";
+import Votes from "../Components/comments/Votes";
 
 function SingleArticle(newComment, setNewComment) {
   const [isLoading, setIsLoading] = useState(false);

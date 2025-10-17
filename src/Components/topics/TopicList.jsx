@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getTopics } from "../../api";
+import { getTopics } from "../../../api";
 import TopicCard from "./TopicCard";
-
+import './Topic.css'
 function TopicList() {
   const [topics, setTopics] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

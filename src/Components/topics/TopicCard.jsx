@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import './Topic.css'
 
 function TopicCard({ topic }) {
   const navigate = useNavigate();

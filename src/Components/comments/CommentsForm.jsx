@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { postComment } from "../../api";
-
+import { postComment } from "../../../api";
+import './Comments.css'
 
 function CommentsForm({ articleId, onCommentAdded }) {
   const [newComment, setNewComment] = useState("");

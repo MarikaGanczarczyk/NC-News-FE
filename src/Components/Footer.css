@@ -1,0 +1,26 @@
+.footer {
+  background-color: #fff1f7;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  animation: colorShift 6s infinite;
+  margin-top: auto;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  color: #cc6699;
+  font-family: "Playfair Display", serif;
+}

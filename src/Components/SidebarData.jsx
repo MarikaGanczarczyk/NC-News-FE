@@ -1,8 +1,6 @@
 import React from "react";
 
-// import * as AiIcons from "react-icons/ai";
-// import * as BiIcons from "react-icons/bi";
-// import * as PiIcons from "react-icons/pi";
+
 import { CiLogin } from "react-icons/ci";
 import { AiFillHome } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";

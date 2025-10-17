@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Votes from "./Votes";
-import { deleteComment } from "../../api";
+import { deleteComment } from "../../../api";
+import './Comments.css'
 
 const CommentCard = ({ comment, commentId, setIsDeleting}) => {
   const [isLoading, setIsLoading] = useState(false)

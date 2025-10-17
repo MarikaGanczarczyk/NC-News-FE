@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getArticlesByTopicSlug } from "../../api";
 import { useParams } from "react-router-dom";
-import ArticleCard from "../Components/ArticleCard";
+import ArticleCard from "../Components/articles/ArticleCard";
 
 function TopicPage() {
     const {slug} = useParams()
