@@ -44,19 +44,24 @@ function SingleArticle(newComment, setNewComment) {
             <div className="single-article">
             <div className="article-header">
            
-             <img
-              className="single-article-card-img"
-              src={articleById.article_img_url}
-              alt={articleById.title}
-            />
+            <article className="single-article-container">
+  
+  <div className="article-meta">
+    <p className="article-card-author">By {articleById.author}</p>
+    <span className="meta-separator">•</span>
+    <p className="article-date">{formatedDate}</p>
+  </div>
 
-            <p className="article-card-author">Author: {articleById.author}</p>
-           
-            <p className="article-card-topic">Topic: {articleById.topic}</p>
-              <div className="text-box">
-              <p className="text-body">{articleById.body}</p>
-            </div>
-            <p>Date: {formatedDate}</p>
+  <img
+    className="single-article-card-img"
+    src={articleById.article_img_url}
+    alt={articleById.title}
+  />
+
+  <div className="text-box">
+    <p className="text-body">{articleById.body}</p>
+  </div>
+</article>
            
            
             <Votes />

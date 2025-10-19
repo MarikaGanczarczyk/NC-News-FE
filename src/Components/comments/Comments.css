@@ -1,38 +1,215 @@
+/* Comment Form Card */
 .comment-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+ background: linear-gradient(135deg, #2d1b4e 0%, #cc6699 100%);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .comment-card:hover {
-  transform: scale(1.01);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
-.comment-card-author {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 4px;
+
+/* Form Styling */
+.comment-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.comment-card-topic {
-  font-style: italic;
-  color: #555;
+
+.name-input,
+.comment-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.comment-card-date {
-  font-weight: bold;
-  font-size: 0.8rem;
-  color: #333;
-  margin-bottom: 8px;
+
+.name-input h4,
+.comment-input h4 {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.name-input input {
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.name-input input:focus {
+  outline: none;
+  border-color: #fff;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.textarea-box {
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  min-height: 120px;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.textarea-box:focus {
+  outline: none;
+  border-color: #fff;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
 .comment-button {
-  height: 30px;
-  width: 80px;
-  background-color: #b4afaf;
-  font-size: 1.05rem;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border-style: none;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: #667eea;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.comment-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
+}
+
+.comment-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.comment-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Display Comment Card */
+.comment-display-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #2d1b4e;
+  transition: all 0.3s ease;
+}
+
+.comment-display-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateX(5px);
+}
+
+.comment-card-author {
+  font-weight: 700;
+  font-size: 18px;
+  color: #667eea;
+  margin: 0 0 10px 0;
+}
+
+.comment-card-topic {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-card-date {
+  color: #999;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.delete-button {
+  padding: 8px 20px;
+  border: 2px solid #e94560;
+  border-radius: 20px;
+  background: transparent;
+  color: #e94560;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background: #e94560;
+  color: white;
+  transform: scale(1.05);
+}
+
+.delete-button:active {
+  transform: scale(0.98);
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.like-button,
+.dislike-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #333;
+}
+
+.like-button:hover {
+  background: rgba(102, 126, 234, 0.3);
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+.dislike-button:hover {
+  background: rgba(245, 87, 108, 0.3);
+  border-color: #f5576c;
+  transform: scale(1.05);
+}
+
+.likes-count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
 }

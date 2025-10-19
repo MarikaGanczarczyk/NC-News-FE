@@ -27,15 +27,15 @@ if(isLoading){
 
   return (
     <>
-      <section className="comment-card">
-        <p className="comment-card-author">{comment.author}</p>
-        <p className="comment-card-topic">{comment.body}</p>
-        <p className="comment-card-date">{formatedDate}</p>
-        <button className="delete-button" onClick={handleClick}>
-          delete
-        </button>
-        <Votes votes={comment.votes} />
-      </section>
+      <section className="comment-display-card">
+  <p className="comment-card-author">{comment.author}</p>
+  <p className="comment-card-topic">{comment.body}</p>
+  <p className="comment-card-date">{formatedDate}</p>
+  <button className="delete-button" onClick={handleClick}>
+    Delete
+  </button>
+  <Votes votes={comment.votes} />
+</section>
     </>
   );
 };
