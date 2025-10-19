@@ -60,44 +60,9 @@
 .text-body {
   font-size: 28px;
 }
-.title {
-  text-align: center;
-  font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  color: #cc6699;
-  margin-top: 2rem;
-}
+
 
 .textarea-box {
   height: 75px;
   width: 465px;
-}
-
-.about-section {
-  background-color: #fff1f7;
-  padding: 50px 30px;
-  margin: 40px auto;
-  max-width: 800px;
-  border-radius: 40px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  position: relative;
-  font-family: "Playfair Display", serif;
-}
-
-.about-quote {
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  color: #cc6699;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.about-text {
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  color: #555;
-  max-width: 700px;
-  margin: 0;
-  line-height: 1.6;
 }
