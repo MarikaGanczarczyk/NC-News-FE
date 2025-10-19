@@ -1,0 +1,42 @@
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  justify-content: center;
+  margin-top: 200px;
+  align-items: stretch;
+}
+.article-list li {
+  display: grid;
+  flex: 0 1 300px;
+  list-style: none;
+}
+.article-container {
+  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+
+  margin: 30px auto;
+  padding-left: 40px;
+
+  padding-right: 40px;
+  box-sizing: border-box;
+
+  background-color: #fff1f7;
+}
+.articles-header-title {
+  font-size: 50px;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Playfair Display", serif;
+  color: #cc6699;
+  margin-top: -12px;
+}
