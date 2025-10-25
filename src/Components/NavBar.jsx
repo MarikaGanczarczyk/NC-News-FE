@@ -7,7 +7,7 @@ import { SidebarData } from "./SidebarData";
 import "./NavBar.css";
 import { IconContext } from "react-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+// import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 function NavBar() {
   const [sidebar, setSidebar] = useState(false);
@@ -22,7 +22,7 @@ function NavBar() {
             <FaIcons.FaBars />
              
           </div>
-          <div className="social-icons">
+          {/* <div className="social-icons">
       <a className="icon-ins" href="https://instagram.com" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faInstagram} className="icon" />
       </a>
@@ -30,7 +30,7 @@ function NavBar() {
      className="icon-fb" href="https://facebook.com" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faFacebookF} className="icon" />
       </a>
-    </div>
+    </div> */}
         
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>

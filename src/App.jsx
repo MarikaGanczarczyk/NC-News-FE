@@ -29,6 +29,7 @@ function App() {
 
         <Route path="/topics" element={<TopicList />} />
         <Route path="/logIn" element={<LogIn />} />
+        
         <Route path="topics/:slug" element={<TopicPage />} />
       </Routes>
       <Footer />
