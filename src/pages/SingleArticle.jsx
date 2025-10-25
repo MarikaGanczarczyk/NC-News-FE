@@ -5,7 +5,7 @@ import { getArticlesByID } from "../../api";
 import CommentsList from "../Components/comments/CommentsList";
 import Votes from "../Components/comments/Votes";
 
-function SingleArticle(newComment, setNewComment) {
+function SingleArticle(newComment, setNewComment, votes) {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHaserror] = useState(false);
   const { article_id } = useParams();
@@ -64,7 +64,7 @@ function SingleArticle(newComment, setNewComment) {
 </article>
            
            
-            <Votes />
+            <Votes votes={votes} article_id={article_id}/>
           </div>
           </div>
             <div className="single-article">

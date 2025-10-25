@@ -84,3 +84,15 @@ export const getArticlesByTopicSlug = (slug) => {
       throw err;
     });
 };
+
+export const updateArticlesVotes = (article_id, inc_votes ) =>{
+  return apiClient
+  .patch(`/articles/${article_id}`, {inc_votes})
+  .then((response)=>{
+    return response.data.article
+  })
+  .catch((err)=>{
+    console.log(err)
+    throw err
+  })
+}
